@@ -24,6 +24,8 @@ namespace ExtensibleDesktopCompanion
 			var moduleManager = new ModuleManager();
 			// Provides basic commands like help and exit
 			moduleManager.AddModule(new WelcomeModule());
+			// Provides random number generation
+			moduleManager.AddModule(new RandomModule());
 			// Adds stock quote look up from IEX exchange
 			moduleManager.AddModule(new FinancialModule(new IEXProvider(sharedClient)));
 			// Adds stock quote look up from Alpha Advantage
